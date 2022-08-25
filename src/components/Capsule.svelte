@@ -13,7 +13,7 @@
 	});
     
 	renderer.setPixelRatio(window.devicePixelRatio);
-	renderer.setSize(window.innerWidth*.3, window.innerHeight*.3);
+	renderer.setSize(window.innerWidth*.5, window.innerHeight*.5);
 
 	// moves the camera backwards - otherwise it is in the middle of the object
 	camera.position.setZ(50);

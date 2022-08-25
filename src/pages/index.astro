@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar.svelte";
 import Capsule from "../components/Capsule.svelte";
 import Box from "../components/Box.svelte";
 import Button from "../components/Button.svelte";
+import Footer from "../components/Footer.svelte";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -32,7 +33,7 @@ import Button from "../components/Button.svelte";
 			</p>
 		</section>
 		<Capsule client:visible />
-		<section class="ellipse grid justify-items-center py-6 gap-y-6">
+		<section class="ellipse grid justify-items-center py-10 gap-y-6">
 			<h1>How it works</h1>
 			<p class="text-center">
 				DATES: September 13 - October 13,<br />
@@ -42,18 +43,52 @@ import Button from "../components/Button.svelte";
 			</p>
 			<Box />
 			<Box />
-			<div class="grid hover:scale-125">
-				<div class="flex">
-					<div class="w-1 bg-black mt-1"></div>
-					<div
-						class="border-2 border-black w-40 bg-gradient-to-r from-[#89E0E7] via-[#FBBAB8] to-[#FCE3B5] text-center "
-					>
-						<p>Apply Now</p>
-					</div>
-				</div>
-				<div class="h-1 bg-black mr-1"></div>
-			</div>
+			<Button />
 		</section>
+		<section class="grid justify-items-center content-center gap-y-6 mx-4">
+			<h1 class="text-center">Yoga, why?</h1>
+			<p class="mx-4 text-center">
+				Practicing Yoga builds self-disicpline, and this brings order
+				into your entire life
+				<br /><br />
+				Practicing Yoga helps you create a lifestyle that encourages you
+				to eat and sleep well - this makes you feel more energetic in your
+				daily life
+				<br /><br />
+				Practising yoga teaches you how to cope with failures and setbacks
+				on a regular basis – this turns you into a braver person so you can
+				take risks and accomplish greater things in life
+				<br /><br />
+				By practiciing yoga, you become way more patient
+				<br />
+				This helps you set bigger goalas, and makes you a better person
+			</p>
+			<p class="underline">read more...</p>
+		</section>
+		
+		<div class="grid justify-items-center gap-y-4 py-4 bg-gradient-to-r from-[#89E0E7] via-[#FBBAB8] to-[#FCE3B5] mt-6">
+			<div class="flex justify-center items-center gap-x-4">
+				<img
+					src="src/images/footer/whatsapp.svg"
+					alt="whatsapp icon"
+					width="14"
+					height="14"
+				/>
+				<img
+					src="src/images/footer/instagram.svg"
+					alt="whatsapp icon"
+					width="14"
+					height="14"
+				/>
+				<img
+					src="src/images/footer/youtube.svg"
+					alt="whatsapp icon"
+					width="19.87"
+					height="14"
+				/>
+			</div>
+		<p>© 2022. All Rights Reserved</p>
+		</div>
 	</main>
 </Layout>
 
