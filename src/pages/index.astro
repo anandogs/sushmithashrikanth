@@ -1,36 +1,66 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from '../components/Navbar.svelte';
+import Navbar from "../components/Navbar.svelte";
+import Capsule from "../components/Capsule.svelte";
+import Box from "../components/Box.svelte";
+import Button from "../components/Button.svelte";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<Navbar/>
+		<Navbar />
 		<section class="grid justify-items-center content-center gap-y-6 mx-4">
-		<h1 class="text-center">Introspection Through Movement</h1>
-		<p class="mx-4 text-center">
-			Sutras in Motion : Ashtanga Yoga through the lens of Philosophy
-			<br />&#127800;<br />
-			Open invitation to anyone interested in learning how to levitate in lotus
-			pose and elevate every aspect of their lives..
-			<br />&#127800;<br />
-			to join us on a 30 day journey to experience a profound shift in flexibility,
-			inner stability and strength through reflection, live feedback, and community
-			support
-			<br />&#127800;<br />
-			Details<br/> 12 Live Yoga Classes every Tue, Wed, Thu<br />
-			Master Half Primary Sequence <br />
-			Philosophy themed classes <br />
-			Reflection Questions after every class<br />
-			10 Mini-lectures on Yoga Philosophy <br />
-			Group Discussions on their relevance to daily life
-			<br />&#127800;<br />
-			Come intrigued, leave integrated. 🙏
-		</p>
-	</section>
+			<h1 class="text-center">Introspection Through Movement</h1>
+			<p class="mx-4 text-center">
+				Sutras in Motion : Ashtanga Yoga through the lens of Philosophy
+				<br />&#127800;<br />
+				Open invitation to anyone interested in learning how to levitate
+				in lotus pose and elevate every aspect of their lives..
+				<br />&#127800;<br />
+				to join us on a 30 day journey to experience a profound shift in
+				flexibility, inner stability and strength through reflection, live
+				feedback, and community support
+				<br />&#127800;<br />
+				Details<br /> 12 Live Yoga Classes every Tue, Wed, Thu<br />
+				Master Half Primary Sequence <br />
+				Philosophy themed classes <br />
+				Reflection Questions after every class<br />
+				10 Mini-lectures on Yoga Philosophy <br />
+				Group Discussions on their relevance to daily life
+				<br />&#127800;<br />
+				Come intrigued, leave integrated. 🙏
+			</p>
+		</section>
+		<Capsule client:visible />
+		<section class="ellipse grid justify-items-center py-6 gap-y-6">
+			<h1>How it works</h1>
+			<p class="text-center">
+				DATES: September 13 - October 13,<br />
+				TIMES: Every Tue, Wed and Thurs<br />
+				FORMAT:15 live training sessions over 5 weeks<br />
+				CAPACITY:10 students<br />
+			</p>
+			<Box />
+			<Box />
+			<div class="grid hover:scale-125">
+				<div class="flex">
+					<div class="w-1 bg-black mt-1"></div>
+					<div
+						class="border-2 border-black w-40 bg-gradient-to-r from-[#89E0E7] via-[#FBBAB8] to-[#FCE3B5] text-center "
+					>
+						<p>Apply Now</p>
+					</div>
+				</div>
+				<div class="h-1 bg-black mr-1"></div>
+			</div>
+		</section>
 	</main>
 </Layout>
 
 <style>
-
+	.ellipse {
+		background-image: url("../images/bg_ellipse.svg");
+		background-position: center;
+		background-size: cover;
+	}
 </style>
