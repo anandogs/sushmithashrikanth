@@ -3,7 +3,7 @@
     <div
       class="top-0 border-black border-2 bg-white w-64 grid py-4 gap-y-4 px-2"
     >
-      <h2>Pre-Funding</h2>
+      <h2>📅 Dates</h2>
       <div class="border-black border-2 bg-[#F6F5F2] mx-4 px-2">
         <p>
           You haven't raised but you have a company you're working on taking
