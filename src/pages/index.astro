@@ -15,14 +15,14 @@ import Footer from "../components/Footer.svelte";
 			class="grid justify-items-center content-center gap-y-4 mx-4 my-6"
 		>
 			<div class="flex flex-wrap justify-center">
-				<h1 class="text-center">
-					<span class="custom_underline">Introspection</span>
-					<span class="custom_underline">Through</span>
-					<span class="custom_underline">Movement</span>
+				<h1 class="text-center flex flex-wrap justify-center">
+					<span class="custom_underline">Introspection&nbsp;</span>
+					<span class="custom_underline">Through&nbsp;</span>
+					<span class="custom_underline">Movement&nbsp;</span>
 				</h1>
 			</div>
 
-			<div class="mx-4 text-left">
+			<div class="mx-4 text-left max-w-3xl">
 				<h3>
 					Sutras in Motion : Ashtanga Yoga through the lens of
 					Philosophy
@@ -49,115 +49,182 @@ import Footer from "../components/Footer.svelte";
 			<p>✅ 10 Mini-lectures on Yoga Philosophy</p>
 			<p>✅ Group Discussions and accountability</p>
 		</section>
-		<div class="flex justify-between px-10 mt-6">
-			<h3>MIND</h3>
-			<h3>SPIRIT</h3>
+		<div class="flex justify-between px-10 mt-6 max-w-3xl m-auto">
+			<h3 class="custom_underline_small">MIND</h3>
+			<h3 class="custom_underline_small">SPIRIT</h3>
 		</div>
 		<Capsule client:visible />
-		<div class="flex justify-center px-10 mb-6">
-			<h3>BODY</h3>
+		<div class="flex justify-center px-10 mb-6 max-w-3xl m-auto">
+			<h3 class="custom_underline_small">BODY</h3>
 		</div>
 
 		<section class="ellipse grid justify-items-center py-10 gap-y-6">
 			<h1>How it works</h1>
-			<Box heading={"📅 DATES: Sep 12 - Oct 15"} content={false} />
-			<Box heading={"⏰ TIMES"}>
-				<div class="grid gap-y-4">
-					<p>
-						<span class="cursor-pointer tooltip"
-							>ℹ️<span
-								>Ideal for Europe, East- Africa or India-WFH</span
-							>
-						</span> SLOT A : 7:00 AM CET on Tue & Thu
-					</p>
-					<p>
-						<span class="cursor-pointer tooltip"
-							>ℹ️<span
-								>Ideal for Australia, UK, India - lunch hour</span
-							>
-						</span> SLOT B : 5:30 PM AEST on Wed & Fri
-					</p>
-					<p>
-						<span class="cursor-pointer tooltip"
-							>ℹ️<span>Ideal for India or USA</span>
-						</span> SLOT C : 6:30 PM IST on Mon & Wed
-					</p>
-					<p>
-						<span class="cursor-pointer tooltip"
-							>ℹ️<span>7 am UK, 9 am Kenya, 5pm Sydney</span>
-						</span> Bonus : Group Class every Saturday at 11:30 am IST
-					</p>
+			<div class="grid gap-y-6 md:grid-cols-2 md:gap-x-4">
+				<div class="md:order-1">
+					<Box
+						heading={"📅 DATES: Sep 12 - Oct 15"}
+						content={false}
+					/>
 				</div>
-			</Box>
-			<Box heading={"📋 FORMAT: 15 live training sessions"}>
-				<div class="grid gap-y-4">
-					<p>
-						Each week, you’ll have to attend 3 live sessions on Zoom
-					</p>
-					<p>
-						Session 1 : Breathwork, Mobility work and Strength
-						Drills
-					</p>
-					<p>
-						Session 2 : Mysore Style (1:1 class in a group setting)
-					</p>
-					<p>Session 3 : Beats driven led class open to all slots</p>
+				<div class="md:order-3">
+					<Box heading={"⏰ TIMES"}>
+						<div class="grid gap-y-4">
+							<p>
+								<span class="cursor-pointer tooltip"
+									>ℹ️<span
+										>Ideal for Europe, East- Africa or
+										India-WFH</span
+									>
+								</span> SLOT A : 7:00 AM CET on Tue & Thu
+							</p>
+							<p>
+								<span class="cursor-pointer tooltip"
+									>ℹ️<span
+										>Ideal for Australia, UK, India - lunch
+										hour</span
+									>
+								</span> SLOT B : 5:30 PM AEST on Wed & Fri
+							</p>
+							<p>
+								<span class="cursor-pointer tooltip"
+									>ℹ️<span>Ideal for India or USA</span>
+								</span> SLOT C : 6:30 PM IST on Mon & Wed
+							</p>
+							<p>
+								<span class="cursor-pointer tooltip"
+									>ℹ️<span
+										>7 am UK, 9 am Kenya, 5pm Sydney</span
+									>
+								</span> Bonus : Group Class every Saturday at 11:30
+								am IST
+							</p>
+						</div>
+					</Box>
 				</div>
-			</Box>
-			<Box heading={"🖥️ CONTENT: 10 mini-lectures"}>
-				<div class="grid gap-y-4">
-					<p>
-						Watch informative videos on Patanjali’s Yoga Sutras
-						Apply those principles to your yoga practice through
-						introspection Reflection tasks to take insights from the
-						mat into daily life.
-					</p>
+				<div class="md:order-4">
+					<Box heading={"📋 FORMAT: 15 live training sessions"}>
+						<div class="grid gap-y-4">
+							<p>
+								Each week, you’ll have to attend 3 live sessions
+								on Zoom
+							</p>
+							<p>
+								Session 1 : Breathwork, Mobility work and
+								Strength Drills
+							</p>
+							<p>
+								Session 2 : Mysore Style (1:1 class in a group
+								setting)
+							</p>
+							<p>
+								Session 3 : Beats driven led class open to all
+								slots
+							</p>
+						</div>
+					</Box>
 				</div>
-			</Box>
-			<Box
-				heading={"👥 CAPACITY: 8 students/slot for personalized attention"}
-				content={false}
-			/>
-			<Button />
+				<div class="md:order-6">
+					<Box heading={"🖥️ CONTENT: 10 mini-lectures"}>
+						<div class="grid gap-y-4">
+							<p>
+								Watch informative videos on Patanjali’s Yoga
+								Sutras
+							</p>
+							<p>
+								Apply those principles to your yoga practice
+								through introspection
+							</p>
+							<p>
+								Reflection tasks to take insights from the mat
+								into daily life.
+							</p>
+						</div>
+					</Box>
+				</div>
+				<div class="md:order-2">
+					<Box
+						heading={"👥 CAPACITY: 8 students/slot for personalized attention"}
+						content={false}
+					/>
+				</div>
+	
+			</div>
+
+			<a href="https://p.bttr.to/3KtzaMs">
+				<Button />
+			</a>
+
 		</section>
 		<section class="grid justify-items-center content-center gap-y-6 mx-4">
 			<h1 class="text-center">
-				<span class="custom_underline">What results</span><span
+				<span class="custom_underline">What results&nbsp;</span><span
 					class="custom_underline">can you expect?</span
 				>
 			</h1>
 			<div class="mx-4">
 				<p>Here are the 6 most common results from our students</p>
 			</div>
-			<EmojiBox emoji={"📏"}>
-				It’s brought so much <strong>order and discipline</strong> into my
-				entire life
-			</EmojiBox>
-			<EmojiBox emoji={"🥕"}>
-				I eat and sleep much better now, and <strong
-					>feel more energetic</strong
-				> at work
-			</EmojiBox>
-			<EmojiBox emoji={"🧘‍♀️"}>
-				I’ve become <strong>more patient</strong>, and this has improved
-				my relationships
-			</EmojiBox>
-			<EmojiBox emoji={"📝"}>
-				The philosophy has helped me <strong
-					>understand myself better</strong
-				> and be more reflective than reflexive</EmojiBox
-			>
-			<EmojiBox emoji={"💪"}>
-				I feel much stronger in just 30 days, I <strong
-					>feel more confident in my body</strong
-				>
-			</EmojiBox>
-			<EmojiBox emoji={"💃"}>
-				It gave me the <strong>confidence to try out new things</strong>
-				more often
-			</EmojiBox>
+			<div class="grid gap-y-6 md:grid-cols-2 md:gap-x-4">
+				<div>
+					<EmojiBox emoji={"📏"}>
+						It’s brought so much <strong
+							>order and discipline</strong
+						> into my entire life
+					</EmojiBox>
+				</div>
+				<div>
+					<EmojiBox emoji={"🥕"}>
+						I eat and sleep much better now, and <strong
+							>feel more energetic</strong
+						> at work
+					</EmojiBox>
+				</div>
+				<div>
+					<EmojiBox emoji={"🧘‍♀️"}>
+						I’ve become <strong>more patient</strong>, and this has
+						improved my relationships
+					</EmojiBox>
+				</div>
+				<div>
+					<EmojiBox emoji={"📝"}>
+						The philosophy has helped me <strong
+							>understand myself better</strong
+						> and be more reflective than reflexive</EmojiBox
+					>
+				</div>
+				<div>
+					<EmojiBox emoji={"💪"}>
+						I feel much stronger in just 30 days, I <strong
+							>feel more confident in my body</strong
+						>
+					</EmojiBox>
+				</div>
+				<div>
+					<EmojiBox emoji={"💃"}>
+						It gave me the <strong
+							>confidence to try out new things</strong
+						>
+						more often
+					</EmojiBox>
+				</div>
+			</div>
 		</section>
-
+		<section
+			class="grid justify-items-center content-center gap-y-6 mx-4 my-6"
+		>
+			<div class="grid gap-y-6">
+				<h3 class="text-start">
+					Yoga changes you and you change your life
+				</h3>
+				<p>Still having second thoughts?</p>
+				<a
+					href="https://equinoxlabs.zoom.us/webinar/register/7916615125837/WN_B1WKh6CSQ0aBbtOaaq-UZw"
+				>
+					<p class="underline">Sign up for a free trial</p>
+				</a>
+			</div>
+		</section>
 		<Footer />
 	</main>
 </Layout>

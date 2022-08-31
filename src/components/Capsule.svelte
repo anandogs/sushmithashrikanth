@@ -55,6 +55,6 @@
   });
 </script>
 
-<div class="grid justify-items-center">
+<div class="grid justify-items-center max-w-3xl m-auto">
   <canvas bind:this={canvasSelector} />
 </div>
