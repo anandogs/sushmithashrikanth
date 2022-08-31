@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.svelte";
 import Capsule from "../components/Capsule.svelte";
 import Box from "../components/Box.svelte";
+import EmojiBox from "../components/EmojiBox.svelte";
 import Button from "../components/Button.svelte";
 import Footer from "../components/Footer.svelte";
 ---
@@ -10,29 +11,53 @@ import Footer from "../components/Footer.svelte";
 <Layout title="Introspection through Movement">
 	<main>
 		<Navbar />
-		<section class="grid justify-items-center content-center gap-y-6 mx-4">
-			<h1 class="text-center">Introspection Through Movement</h1>
-			<p class="mx-4 text-center">
-				Sutras in Motion : Ashtanga Yoga through the lens of Philosophy
-				<br />&#127800;<br />
-				Open invitation to anyone interested in learning how to levitate
-				in lotus pose and elevate every aspect of their lives..
-				<br />&#127800;<br />
-				to join us on a 30 day journey to experience a profound shift in
-				flexibility, inner stability and strength through reflection, live
-				feedback, and community support
-				<br />&#127800;<br />
-				Details<br /> 12 Live Yoga Classes every Tue, Wed, Thu<br />
-				Master Half Primary Sequence <br />
-				Philosophy themed classes <br />
-				Reflection Questions after every class<br />
-				10 Mini-lectures on Yoga Philosophy <br />
-				Group Discussions on their relevance to daily life
-				<br />&#127800;<br />
-				Come intrigued, leave integrated. 🙏
-			</p>
+		<section
+			class="grid justify-items-center content-center gap-y-4 mx-4 my-6"
+		>
+			<div class="flex flex-wrap justify-center">
+				<h1 class="text-center">
+					<span class="custom_underline">Introspection</span>
+					<span class="custom_underline">Through</span>
+					<span class="custom_underline">Movement</span>
+				</h1>
+			</div>
+
+			<div class="mx-4 text-left">
+				<h3>
+					Sutras in Motion : Ashtanga Yoga through the lens of
+					Philosophy
+				</h3>
+				<p>
+					<br />
+					Open invitation to anyone interested in learning how to levitate
+					in lotus pose and elevate every aspect of their lives..
+					<br /><br />
+					to join us on a 30 day journey to experience a profound shift
+					in flexibility, inner stability and strength through reflection,
+					live feedback, and community support
+					<br /><br />
+					Come intrigued, leave integrated. 🙏
+				</p>
+			</div>
 		</section>
+		<section class="grid p-4 m-auto gap-y-4 w-80 bg-[#F6F5F2]">
+			<h3>Details</h3>
+			<p>✅ 12 Live Yoga Classes</p>
+			<p>✅ Master Half Primary Sequence</p>
+			<p>✅ Emotion themed classes</p>
+			<p>✅ Reflection Questions</p>
+			<p>✅ 10 Mini-lectures on Yoga Philosophy</p>
+			<p>✅ Group Discussions and accountability</p>
+		</section>
+		<div class="flex justify-between px-10 mt-6">
+			<h3>MIND</h3>
+			<h3>SPIRIT</h3>
+		</div>
 		<Capsule client:visible />
+		<div class="flex justify-center px-10 mb-6">
+			<h3>BODY</h3>
+		</div>
+
 		<section class="ellipse grid justify-items-center py-10 gap-y-6">
 			<h1>How it works</h1>
 			<p class="text-center">
@@ -41,31 +66,98 @@ import Footer from "../components/Footer.svelte";
 				FORMAT:15 live training sessions over 5 weeks<br />
 				CAPACITY:10 students<br />
 			</p>
-			<Box />
-			<Box />
+			<Box heading={"📅 DATES: Sep 12 - Oct 15"} content={false} />
+			<Box heading={"⏰ TIMES"}>
+				<div class="grid gap-y-4">
+					<p>
+						SLOT A : 7:00 AM CET <span
+							class="cursor-pointer tooltip"
+							>ℹ️<span
+								>Ideal for Europe, East- Africa or India-WFH</span
+							>
+						</span> on Tue & Thu
+					</p>
+					<p>
+						SLOT B : 5:30 PM AEST <span
+							class="cursor-pointer tooltip"
+							>ℹ️<span
+								>Ideal for Australia, UK, India - lunch hour</span
+							>
+						</span> on Wed & Fri
+					</p>
+					<p>
+						SLOT C : 6:30 PM IST <span
+							class="cursor-pointer tooltip"
+							>ℹ️<span>Ideal for India or USA</span>
+						</span> on Mon & Wed
+					</p>
+					<p>
+						Bonus : Group Class every Saturday at 11:30 am IST <span
+							class="cursor-pointer tooltip"
+							>ℹ️<span>7 am UK, 9 am Kenya, 5pm Sydney</span>
+						</span>
+					</p>
+				</div>
+			</Box>
+			<Box heading={"📋 FORMAT: 15 live training sessions"}>
+				<div class="grid gap-y-4">
+					<p>
+						Each week, you’ll have to attend 3 live sessions on Zoom
+					</p>
+					<p>
+						Session 1 : Breathwork, Mobility work and Strength
+						Drills
+					</p>
+					<p>
+						Session 2 : Mysore Style (1:1 class in a group setting)
+					</p>
+					<p>Session 3 : Beats driven led class open to all slots</p>
+				</div>
+			</Box>
+			<Box heading={"🖥️ CONTENT: 10 mini-lectures"}>
+				<div class="grid gap-y-4">
+					<p>
+						Watch informative videos on Patanjali’s Yoga Sutras
+						Apply those principles to your yoga practice through
+						introspection Reflection tasks to take insights from the
+						mat into daily life.
+					</p>
+				</div>
+			</Box>
+			<Box
+				heading={"👥 CAPACITY: 8 students/slot for personalized attention"}
+				content={false}
+			/>
 			<Button />
 		</section>
 		<section class="grid justify-items-center content-center gap-y-6 mx-4">
-			<h1 class="text-center">Yoga, why?</h1>
-			<p class="mx-4 text-center">
-				Practicing Yoga builds self-disicpline, and this brings order
-				into your entire life
-				<br /><br />
-				Practicing Yoga helps you create a lifestyle that encourages you
-				to eat and sleep well - this makes you feel more energetic in your
-				daily life
-				<br /><br />
-				Practising yoga teaches you how to cope with failures and setbacks
-				on a regular basis – this turns you into a braver person so you can
-				take risks and accomplish greater things in life
-				<br /><br />
-				By practiciing yoga, you become way more patient
-				<br />
-				This helps you set bigger goalas, and makes you a better person
-			</p>
-			<p class="underline">read more...</p>
+			<h1 class="text-center">
+				<span class="custom_underline">What results </span><span
+					class="custom_underline">can you expect?</span>
+			</h1>
+			<div class="mx-4">
+				<p>Here are the 6 most common results from our students</p>
+			</div>
+			<EmojiBox emoji={"📏"}>
+				It’s brought so much <strong>order and discipline</strong> into my entire life
+			</EmojiBox>
+			<EmojiBox emoji={"🥕"}>
+				I eat and sleep much better now, and <strong>feel more energetic</strong> at work 
+			</EmojiBox>
+			<EmojiBox emoji={"🧘‍♀️"}>
+				I’ve become <strong>more patient</strong>, and this has improved my relationships 
+			</EmojiBox>
+			<EmojiBox emoji={"📝"}>
+				The philosophy has helped me <strong>understand myself better</strong> and be more reflective than reflexive</EmojiBox>
+			<EmojiBox emoji={"💪"}>
+				I feel much stronger in just 30 days, I <strong>feel more confident in my body</strong>
+			</EmojiBox>
+			<EmojiBox emoji={"💃"}>
+				It gave me the <strong>confidence to try out new things</strong> more often 
+			</EmojiBox>
+
 		</section>
-		
+
 		<Footer />
 	</main>
 </Layout>

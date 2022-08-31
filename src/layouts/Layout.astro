@@ -4,7 +4,7 @@ export interface Props {
 }
 
 const { title } = Astro.props as Props;
-import '@fontsource/questrial';
+import "@fontsource/questrial";
 ---
 
 <!DOCTYPE html>
@@ -18,15 +18,59 @@ import '@fontsource/questrial';
 	</head>
 	<body class="m-auto mt-16">
 		<slot />
+		<style is:global>
+			@font-face {
+				font-family: "GilroyExtraBold";
+				src: url("/fonts/Gilroy-ExtraBold.otf") format("opentype");
+				font-weight: extra-bold;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: "GilroyLight";
+				src: url("/fonts/Gilroy-Light.otf") format("opentype");
+				font-weight: light;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			h1 {
+				font-family: "GilroyExtraBold", sans-serif;
+				font-size: 2.25rem;
+				text-transform: uppercase;
+				letter-spacing: 0rem;
+			}
+			h3 {
+				font-family: "GilroyExtraBold", sans-serif;
+				font-size: 1.25rem;
+				letter-spacing: 0.03em;
+				line-height: 112%;
+			}
+			.custom_underline {
+				background-image: url("/underline.svg");
+				background-position: 50% 80%;
+				background-size: auto 16px;
+				background-repeat: repeat-x;
+			}
+			.tooltip span {
+				display: none;
+				position: absolute;
+				color: #000;
+				background: #fff;
+				padding: 5px;
+			}
+			.tooltip {
+				position: relative;
+			}
+			.tooltip:hover span {
+				display: block;
+				z-index: 10;
+				text-align: center;
+				border: 1px solid #000;
+			}
+			p {
+				font-family: "Questrial", sans-serif;
+			}
+		</style>
 	</body>
 </html>
-<style is:global>
-	h1 {
-		font-family: "Questrial", sans-serif;
-		font-size: 2.25rem;
-	}
-	p {
-		font-family: "Questrial", sans-serif;
-	}
-
-</style>
