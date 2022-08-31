@@ -7,8 +7,8 @@
       <img
         src="/logo.webp"
         alt="logo"
-        width="100px"
-        height="63px"
+        width="128px"
+        height="94px"
       />
     </div>
   </a>
