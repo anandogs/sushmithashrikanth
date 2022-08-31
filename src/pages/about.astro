@@ -2,17 +2,18 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.svelte";
 import Footer from "../components/Footer.svelte";
+import { Image } from "@astrojs/image/components";
+import About1 from "../images/about/about1.jpg";
+import About2 from "../images/about/about2.jpg";
 ---
 
 <Layout title="Introspection through Movement">
     <main>
         <Navbar />
-        <section
-            class="grid justify-items-center content-center gap-y-4 mx-4 my-6"
-        >
-            <h1 class="text-center custom_underline">About</h1>
-            
-            <p class="mx-4 max-w-3xl">
+        <section class="grid justify-items-center content-center gap-y-4 my-6">
+            <h1 class="text-center custom_underline mx-4">About</h1>
+
+            <p class="mx-8 max-w-3xl">
                 Sushmitha is a yoga coach and wellness mentor with over a decade
                 of study and five years of teaching experience under her belt.
                 She honed her skills in this ancient art from an early age, and
@@ -23,7 +24,16 @@ import Footer from "../components/Footer.svelte";
                 (AYI) certified teacher, and now helps people of all backgrounds
                 and abilities find joy through movement.
             </p>
-            <p class="mx-4 max-w-3xl">
+            <div class="max-w-3xl">
+                <Image
+                    src={About1}
+                    format="webp"
+                    width={1000}
+                    height={666.74}
+                    alt="Sushmitha meditating on a mountain"
+                />
+            </div>
+            <p class="mx-8 max-w-3xl">
                 Travelling across the globe, Sushmitha has worked with athletes,
                 senior executives, young professionals and underprivileged
                 children alike. Sushmitha also runs a curated tech-enabled
@@ -35,6 +45,15 @@ import Footer from "../components/Footer.svelte";
                 Dish TV, and seeks to continue learning and sharing her love for
                 yoga.
             </p>
+            <div class="max-w-3xl">
+                <Image
+                    src={About2}
+                    format="webp"
+                    width={1000}
+                    height={666.74}
+                    alt="Sushmitha doing a yoga pose on a mountain"
+                />
+            </div>
         </section>
         <Footer />
     </main>
