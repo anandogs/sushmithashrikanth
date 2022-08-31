@@ -5,7 +5,7 @@
     <a href="/">
     <div class="flex w-16">
       <img
-        src="/src/images/header/logo.webp"
+        src="/logo.webp"
         alt="logo"
         width="100px"
         height="63px"
