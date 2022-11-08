@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.svelte";
 import Footer from "../components/Footer.svelte";
-import { Image } from "@astrojs/image/components";
 import About1 from "../images/about/about1.jpg";
 import About2 from "../images/about/about2.jpg";
 ---
@@ -25,9 +24,8 @@ import About2 from "../images/about/about2.jpg";
                 and abilities find joy through movement.
             </p>
             <div class="max-w-3xl">
-                <Image
+                <img
                     src={About1}
-                    format="webp"
                     width={1000}
                     height={666.74}
                     alt="Sushmitha meditating on a mountain"
@@ -46,9 +44,8 @@ import About2 from "../images/about/about2.jpg";
                 yoga.
             </p>
             <div class="max-w-3xl">
-                <Image
+                <img
                     src={About2}
-                    format="webp"
                     width={1000}
                     height={666.74}
                     alt="Sushmitha doing a yoga pose on a mountain"

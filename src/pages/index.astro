@@ -6,233 +6,218 @@ import Box from "../components/Box.svelte";
 import EmojiBox from "../components/EmojiBox.svelte";
 import Button from "../components/Button.svelte";
 import Footer from "../components/Footer.svelte";
+import ImageCarousel from "../components/ImageCarousel.svelte";
+
+import curriculum from "../images/curriculum.jpg";
 ---
 
 <Layout title="Introspection through Movement">
-	<main>
-		<Navbar />
-		<section
-			class="grid justify-items-center content-center gap-y-4 mx-4 my-6"
+  <main>
+    <Navbar />
+    <section class="grid justify-items-center content-center gap-y-4 mx-4 my-6">
+      <div class="flex flex-wrap justify-center">
+        <h1 class="text-center flex flex-wrap justify-center">
+          <span class="custom_underline">Introspection&nbsp;</span>
+          <span class="custom_underline">Through&nbsp;</span>
+          <span class="custom_underline">Movement&nbsp;</span>
+        </h1>
+      </div>
+
+      <div class="mx-4 text-left max-w-3xl">
+        <h3>Sutras in Motion : Ashtanga Yoga through the lens of Philosophy</h3>
+        <p class="py-4">
+          Open invitation to anyone interested in learning how to levitate in
+          lotus pose and elevate every aspect of their lives to join us on a
+          long-term yoga journey with like-minded curious seekers and experience
+          a profound shift in flexibility, inner stability and strength.
+          <br /><br />
+          Through a well organized and progressive curriculum, learn Ashtanga Vinyasa
+          Yoga from the Source with Sushmitha and drastically change your relationship
+          to practice in a way you have (probably) never experienced before.
+          <br /><br />
+          Come intrigued, leave integrated. 🙏
+        </p>
+      </div>
+    </section>
+    <section class="grid p-4 m-auto gap-y-4 w-80 bg-[#F6F5F2]">
+      <h3>Details</h3>
+      <p>✅ 12 Live Yoga Classes/month</p>
+      <p>✅ Progressive personalized sequences</p>
+      <p>✅ Journaling exercises for reflection</p>
+      <p>✅ 10 Mini-lectures on Yoga Philosophy</p>
+      <p>✅ Breathwork, Strength Work and Mobility drills</p>
+    </section>
+    <div class="flex justify-between px-10 mt-6 max-w-3xl m-auto">
+      <h3 class="custom_underline_small">MIND</h3>
+      <h3 class="custom_underline_small">BODY</h3>
+    </div>
+    <Capsule client:visible />
+    <div class="flex justify-center px-10 mb-6 max-w-3xl m-auto">
+      <h3 class="custom_underline_small">SPIRIT</h3>
+    </div>
+
+    <section
+      id="curriculum"
+      class="grid justify-items-center gap-y-4 py-4"
+    >
+	<h1 class="text-center">
+		<span class="custom_underline">Curriculum</span>
+		
+	  </h1>
+	  <div>
+      <img
+        src={curriculum}
+        width={348}
+        height={348}
+        alt="Curriculum"
+      />
+	</div>
+	  <h1 class="text-center">
+		<span class="custom_underline">Concepts covered&nbsp;</span><span
+		  class="custom_underline">in this course</span
 		>
-			<div class="flex flex-wrap justify-center">
-				<h1 class="text-center flex flex-wrap justify-center">
-					<span class="custom_underline">Introspection&nbsp;</span>
-					<span class="custom_underline">Through&nbsp;</span>
-					<span class="custom_underline">Movement&nbsp;</span>
-				</h1>
-			</div>
+	  </h1>
+	  <ImageCarousel client:load/>
+    </section>
 
-			<div class="mx-4 text-left max-w-3xl">
-				<h3>
-					Sutras in Motion : Ashtanga Yoga through the lens of
-					Philosophy
-				</h3>
-				<p>
-					<br />
-					Open invitation to anyone interested in learning how to levitate
-					in lotus pose and elevate every aspect of their lives..
-					<br /><br />
-					to join us on a 30 day journey to experience a profound shift
-					in flexibility, inner stability and strength through reflection,
-					live feedback, and community support
-					<br /><br />
-					Come intrigued, leave integrated. 🙏
-				</p>
-			</div>
-		</section>
-		<section class="grid p-4 m-auto gap-y-4 w-80 bg-[#F6F5F2]">
-			<h3>Details</h3>
-			<p>✅ 12 Live Yoga Classes</p>
-			<p>✅ Master Half Primary Sequence</p>
-			<p>✅ Emotion themed classes</p>
-			<p>✅ Reflection Questions</p>
-			<p>✅ 10 Mini-lectures on Yoga Philosophy</p>
-			<p>✅ Group Discussions and accountability</p>
-		</section>
-		<div class="flex justify-between px-10 mt-6 max-w-3xl m-auto">
-			<h3 class="custom_underline_small">MIND</h3>
-			<h3 class="custom_underline_small">SPIRIT</h3>
-		</div>
-		<Capsule client:visible />
-		<div class="flex justify-center px-10 mb-6 max-w-3xl m-auto">
-			<h3 class="custom_underline_small">BODY</h3>
-		</div>
+    <section class="ellipse grid justify-items-center py-10 gap-y-6">
+      <h1>How it works</h1>
+      <div class="grid gap-y-6 md:grid-cols-2 md:gap-x-4">
+        <div class="md:order-1">
+          <Box
+            heading={"📅 ROLLING ADMISSIONS, JOIN ANYTIME"}
+            content={false}
+          />
+        </div>
+        <div class="md:order-3">
+          <Box heading={"⏰ TIME ZONES"}>
+            <div class="grid gap-y-4">
+				<br/>
+				<p>INDIA : 12:15 PM</p>
+              <p>UK : 6:45 AM</p>
+              <p>France : 7:15 PM</p>
+              <p>South Africa : 8:45 AM</p>
+              <p>Tanzania : 9:45 AM</p>
+              <p>Sydney : 5:45 PM</p>
+			  <br/><br/>
+            </div>
+          </Box>
+        </div>
+        <div class="md:order-4">
+          <Box heading={"📋 12 live training sessions each month"}>
+            <div class="grid gap-y-4">
+              <p>
+                Each week, you’ll have to attend 3 live sessions on Zoom <strong>Add on
+                : Weekly 1:1 session</strong>
+              </p>
+              <p>Session 1 : Breathwork, Mobility work and Strength Drills</p>
+              <p>Session 2 : Mysore Style (1:1 class in a group setting)</p>
+              <p>Session 3 : Beats driven led class</p>
+            </div>
+          </Box>
+        </div>
+        <div class="md:order-2">
+          <Box
+            heading={"👥 CAPACITY: 8 students for personalized attention"}
+            content={false}
+          />
+        </div>
+      </div>
 
-		<section class="ellipse grid justify-items-center py-10 gap-y-6">
-			<h1>How it works</h1>
-			<div class="grid gap-y-6 md:grid-cols-2 md:gap-x-4">
-				<div class="md:order-1">
-					<Box
-						heading={"📅 DATES: Sep 12 - Oct 15"}
-						content={false}
-					/>
-				</div>
-				<div class="md:order-3">
-					<Box heading={"⏰ TIMES"}>
-						<div class="grid gap-y-4">
-							<p>
-								<span class="cursor-pointer tooltip"
-									>ℹ️<span
-										>Ideal for Europe, East- Africa or
-										India-WFH</span
-									>
-								</span> SLOT A : 7:00 AM CET on Tue & Thu
-							</p>
-							<p>
-								<span class="cursor-pointer tooltip"
-									>ℹ️<span
-										>Ideal for Australia, UK, India - lunch
-										hour</span
-									>
-								</span> SLOT B : 5:30 PM AEST on Wed & Fri
-							</p>
-							<p>
-								<span class="cursor-pointer tooltip"
-									>ℹ️<span>Ideal for India or USA</span>
-								</span> SLOT C : 6:30 PM IST on Mon & Wed
-							</p>
-							<p>
-								<span class="cursor-pointer tooltip"
-									>ℹ️<span
-										>7 am UK, 9 am Kenya, 5pm Sydney</span
-									>
-								</span> Bonus : Group Class every Saturday at 11:30
-								am IST
-							</p>
-						</div>
-					</Box>
-				</div>
-				<div class="md:order-4">
-					<Box heading={"📋 FORMAT: 15 live training sessions"}>
-						<div class="grid gap-y-4">
-							<p>
-								Each week, you’ll have to attend 3 live sessions
-								on Zoom
-							</p>
-							<p>
-								Session 1 : Breathwork, Mobility work and
-								Strength Drills
-							</p>
-							<p>
-								Session 2 : Mysore Style (1:1 class in a group
-								setting)
-							</p>
-							<p>
-								Session 3 : Beats driven led class open to all
-								slots
-							</p>
-						</div>
-					</Box>
-				</div>
-				<div class="md:order-6">
-					<Box heading={"🖥️ CONTENT: 10 mini-lectures"}>
-						<div class="grid gap-y-4">
-							<p>
-								Watch informative videos on Patanjali’s Yoga
-								Sutras
-							</p>
-							<p>
-								Apply those principles to your yoga practice
-								through introspection
-							</p>
-							<p>
-								Reflection tasks to take insights from the mat
-								into daily life.
-							</p>
-						</div>
-					</Box>
-				</div>
-				<div class="md:order-2">
-					<Box
-						heading={"👥 CAPACITY: 8 students/slot for personalized attention"}
-						content={false}
-					/>
-				</div>
-	
-			</div>
-
-			<a href="https://p.bttr.to/3KtzaMs">
-				<Button />
-			</a>
-
-		</section>
-		<section class="grid justify-items-center content-center gap-y-6 mx-4">
+    </section>
+	<section class="grid justify-items-center content-center gap-y-6 mx-4 py-6">
+		<div>
 			<h1 class="text-center">
-				<span class="custom_underline">What results&nbsp;</span><span
-					class="custom_underline">can you expect?</span
+				<span class="custom_underline">How much&nbsp;</span><span
+				  class="custom_underline">does it cost?</span
 				>
-			</h1>
-			<div class="mx-4">
-				<p>Here are the 6 most common results from our students</p>
-			</div>
-			<div class="grid gap-y-6 md:grid-cols-2 md:gap-x-4">
-				<div>
-					<EmojiBox emoji={"📏"}>
-						It’s brought so much <strong
-							>order and discipline</strong
-						> into my entire life
-					</EmojiBox>
-				</div>
-				<div>
-					<EmojiBox emoji={"🥕"}>
-						I eat and sleep much better now, and <strong
-							>feel more energetic</strong
-						> at work
-					</EmojiBox>
-				</div>
-				<div>
-					<EmojiBox emoji={"🧘‍♀️"}>
-						I’ve become <strong>more patient</strong>, and this has
-						improved my relationships
-					</EmojiBox>
-				</div>
-				<div>
-					<EmojiBox emoji={"📝"}>
-						The philosophy has helped me <strong
-							>understand myself better</strong
-						> and be more reflective than reflexive</EmojiBox
-					>
-				</div>
-				<div>
-					<EmojiBox emoji={"💪"}>
-						I feel much stronger in just 30 days, I <strong
-							>feel more confident in my body</strong
-						>
-					</EmojiBox>
-				</div>
-				<div>
-					<EmojiBox emoji={"💃"}>
-						It gave me the <strong
-							>confidence to try out new things</strong
-						>
-						more often
-					</EmojiBox>
-				</div>
-			</div>
-		</section>
-		<section
-			class="grid justify-items-center content-center gap-y-6 mx-4 my-6"
-		>
-			<div class="grid gap-y-6 justify-items-center">
-				<h3>
-					Yoga changes you and you change your life
-				</h3>
-				<p>Still having second thoughts?</p>
-				<a
-					href="https://equinoxlabs.zoom.us/webinar/register/7916615125837/WN_B1WKh6CSQ0aBbtOaaq-UZw"
-				>
-					<p class="underline">Sign up for a free trial</p>
-				</a>
-			</div>
-		</section>
-		<Footer />
-	</main>
+			  </h1>
+		</div>
+	
+		<div class="grid justify-items-center content-center gap-y-6 mx-4 md:grid-cols-2 md:gap-x-4">
+		<Box heading={"🧑🏻‍🤝‍🧑🏾 GROUP CLASSES ONLY $59"} content={false} textAlignCenter={true}/>
+		<Box heading={"🪷 GROUP CLASSES + ONE WEEKLY PRIVATE SESSION $145"} content={false} textAlignCenter={true}/>
+		  
+		</div>
+		<p>
+			Can’t afford it? Refer a friend and get 10$ off for each friend who joins!
+		</p>
+		<a href="https://p.bttr.to/3hcpewo">
+			<Button />
+		  </a>
+	
+	</section>
+
+	<section class="grid justify-items-center content-center gap-y-6 mx-4">
+      <h1 class="text-center">
+        <span class="custom_underline">What results&nbsp;</span><span
+          class="custom_underline">can you expect?</span
+        >
+      </h1>
+      <div class="mx-4">
+        <p>Here are the 6 most common results from our students</p>
+      </div>
+      <div class="grid gap-y-6 md:grid-cols-2 md:gap-x-4">
+        <div>
+          <EmojiBox emoji={"📏"}>
+            It’s brought so much <strong>order and discipline</strong> into my entire
+            life
+          </EmojiBox>
+        </div>
+        <div>
+          <EmojiBox emoji={"🥕"}>
+            I eat and sleep much better now, and <strong
+              >feel more energetic</strong
+            > at work
+          </EmojiBox>
+        </div>
+        <div>
+          <EmojiBox emoji={"🧘‍♀️"}>
+            I’ve become <strong>more patient</strong>, and this has improved my
+            relationships
+          </EmojiBox>
+        </div>
+        <div>
+          <EmojiBox emoji={"📝"}>
+            The philosophy has helped me <strong
+              >understand myself better</strong
+            > and be more reflective than reflexive</EmojiBox
+          >
+        </div>
+        <div>
+          <EmojiBox emoji={"💪"}>
+            I feel much stronger in just 30 days, I <strong
+              >feel more confident in my body</strong
+            >
+          </EmojiBox>
+        </div>
+        <div>
+          <EmojiBox emoji={"💃"}>
+            It gave me the <strong>confidence to try out new things</strong>
+            more often
+          </EmojiBox>
+        </div>
+      </div>
+    </section>
+    <section class="grid justify-items-center content-center gap-y-6 mx-4 my-6">
+      <div class="grid gap-y-6 justify-items-center">
+        <h3 class="text-center">Yoga changes you and you change your life</h3>
+        <p>Still having second thoughts?</p>
+        <a
+          href="https://p.bttr.to/3yMA8ib"
+        >
+          <p class="underline">Chat with me</p>
+        </a>
+      </div>
+    </section>
+    <Footer />
+  </main>
 </Layout>
 
 <style>
-	.ellipse {
-		background-image: url("../images/bg_ellipse.svg");
-		background-position: center;
-		background-size: cover;
-	}
+  .ellipse {
+    background-image: url("../images/bg_ellipse.svg");
+    background-position: center;
+    background-size: cover;
+  }
 </style>
