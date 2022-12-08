@@ -9,6 +9,29 @@ import "@fontsource/questrial";
 
 <!DOCTYPE html>
 <html lang="en">
+	<script is:inline>
+
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3451197338537750');
+fbq('track', 'PageView');
+
+	</script>
+	<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-PR5Y213BCQ"></script>
+	<script is:inline>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-PR5Y213BCQ');
+	</script>
+	
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -84,6 +107,9 @@ import "@fontsource/questrial";
 				width: 200px;
 			}
 			p {
+				font-family: "Questrial", sans-serif;
+			}
+			li {
 				font-family: "Questrial", sans-serif;
 			}
 		</style>

@@ -21,4 +21,30 @@
 
   </div>
   <p>© 2022. All Rights Reserved</p>
+  <div class="flex justify-center items-center gap-x-2 pt-[12px]">
+    <p>&#x2022;</p>
+    <a href="./privacy">
+      
+      <p>
+        Privacy
+      </p>
+    </a>
+    <p>&#x2022;</p>
+    <a href="./terms">
+      <p>
+        Terms
+      </p>
+    </a>
+    <p>&#x2022;</p>
+    <a href="./shipping">
+      <p>
+        Shipping
+      </p>
+    </a>
+    <p>&#x2022;</p>
+    <a href="./contact">
+      <p>
+        Contact
+      </p>
+    </a>
 </footer>

@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.svelte";
+import Footer from "../components/Footer.svelte";
+---
+
+<Layout title="Contact us ">
+  <main>
+    <Navbar />
+    
+        <section>
+           <h1>Contact us </h1>
+
+<p>Email : info.sushiyogi@gmail.com</p>           
+<p>Phone : +919940419888</p>          
+<p>Address : Sushi Yogi, No 51 & 52, Cathedral Road, Gopalapuram, Chennai - 600086</p>
+           
+        </section>
+    
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+    section {
+        align-content: flex-start;
+        padding-top: 30px;
+        min-height: 80vh;
+        display: grid;
+        row-gap: 16px;
+        width: 80%;
+        margin: auto;
+    }
+</style>

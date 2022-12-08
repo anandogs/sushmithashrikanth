@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.svelte";
+import Footer from "../components/Footer.svelte";
+---
+
+<Layout title="Shipping & Delivery Policy">
+  <main>
+    <Navbar />
+        <section>
+           <h1> Shipping & Delivery Policy</h1>
+<h3>Last updated on Dec 4th 2022</h3>
+<p>Shipping is not applicable for business.</p>
+        </section>
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+    section {
+        align-content: flex-start;
+        padding-top: 30px;
+        min-height: 80vh;
+        display: grid;
+        row-gap: 16px;
+        width: 80%;
+        margin: auto;
+    }
+</style>
