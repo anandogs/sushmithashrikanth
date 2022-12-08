@@ -12,7 +12,10 @@
       />
     </div>
   </a>
+  <div class="flex gap-x-7">
+  <a href="/retreat"><p>Retreat</p></a>
     <a href="/about"><p>About</p></a>
+  </div>
     <!-- <img src="/burger.svg" alt="burger menu icon" /> -->
   </div>
 </nav>
