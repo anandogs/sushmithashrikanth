@@ -21,10 +21,9 @@
 
   </div>
   <p>© 2022. All Rights Reserved</p>
-  <div class="flex justify-center items-center gap-x-2 pt-[12px]">
+  <div class="flex justify-center items-center gap-x-2 pt-[12px] flex-wrap">
     <p>&#x2022;</p>
     <a href="./privacy">
-      
       <p>
         Privacy
       </p>
@@ -39,6 +38,12 @@
     <a href="./shipping">
       <p>
         Shipping
+      </p>
+    </a>
+    <p>&#x2022;</p>
+    <a href="./refund">
+      <p>
+        Cancellation & Refund
       </p>
     </a>
     <p>&#x2022;</p>
